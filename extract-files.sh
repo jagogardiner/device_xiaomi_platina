@@ -57,4 +57,53 @@ setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
+<<<<<<< HEAD
+=======
+BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+# Load libSonyDefocus from vendor
+CAMERA_IMX386="$BLOB_ROOT"/vendor/lib/libmmcamera_imx386.so
+sed -i "s|/system/lib/hw/|/vendor/lib/hw/|g" "$CAMERA_IMX386"
+
+# Load ZAF configs from vendor
+ZAF_CORE="$BLOB_ROOT"/vendor/lib/libzaf_core.so
+sed -i "s|/system/etc/zaf|/vendor/etc/zaf|g" "$ZAF_CORE"
+
+# Load camera configs from vendor
+CAMERA2_SENSOR_MODULES="$BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
+sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
+
+# Drod unused dependency
+CAMERA_VSTAB_MODULES="$BLOB_ROOT"/vendor/lib/libmmcamera_vstab_module.so
+patchelf --remove-needed libandroid.so "$CAMERA_VSTAB_MODULES"
+
+# Load camera metadata shim
+CAMERAHAL="$BLOB_ROOT"/vendor/lib/hw/camera.msm8998.so
+patchelf --replace-needed libcamera_client.so libcamera_metadata_helper.so "$CAMERAHAL"
+
+# Load wrapped shim
+MDMCUTBACK="$BLOB_ROOT"/vendor/lib64/libmdmcutback.so
+sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "$MDMCUTBACK"
+
+# Correct mods gid
+MODPERM="$BLOB_ROOT"/etc/permissions/com.motorola.mod.xml
+sed -i "s|vendor_mod|oem_5020|g" "$MODPERM"
+
+# Correct qcrilhook library location
+QCRILHOOK="$BLOB_ROOT"/vendor/etc/permissions/qcrilhook.xml
+sed -i "s|/system/framework/qcrilhook.jar|/vendor/framework/qcrilhook.jar|g" "$QCRILHOOK"
+
+# Correct QtiTelephonyServicelibrary location
+TELESERVICELIB="$BLOB_ROOT"/vendor/etc/permissions/telephonyservice.xml
+sed -i "s|/system/framework/QtiTelephonyServicelibrary.jar|/vendor/framework/QtiTelephonyServicelibrary.jar|g" "$TELESERVICELIB"
+
+# Correct android.hidl.manager@1.0-java jar name
+QTI_LIBPERMISSIONS="$BLOB_ROOT"/vendor/etc/permissions/qti_libpermissions.xml
+sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g" "$QTI_LIBPERMISSIONS"
+
+# Load vndk-28 libui for libmot_gpu_mapper
+MOT_GPU_MAPPER="$BLOB_ROOT"/vendor/lib/libmot_gpu_mapper.so
+patchelf --add-needed libui-v28.so "$MOT_GPU_MAPPER"
+
+>>>>>>> a794a2e... nash: Load vndk-28 libui for libmot_gpu_mapper
 "$MY_DIR"/setup-makefiles.sh

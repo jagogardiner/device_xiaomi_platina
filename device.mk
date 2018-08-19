@@ -436,6 +436,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+# VNDK
+# Update this list with what each blob is actually for
+# libicuuc: vendor.qti.hardware.qteeconnector@1.0-impl
+# libstdc++: camera.msm8998
+PRODUCT_PACKAGES += \
+    libicuuc.vendor \
+    libstdc++.vendor \
+    libgui_vendor \
+    vndk_package
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v28/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v28.so
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
