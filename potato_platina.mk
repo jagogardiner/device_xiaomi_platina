@@ -17,13 +17,16 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # Inherit from platina device
 $(call inherit-product, device/xiaomi/platina/device.mk)
 
 # Inherit some common POSP stuff.
 $(call inherit-product, vendor/potato/config/common_full_phone.mk)
+
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 PRODUCT_NAME := potato_platina
 PRODUCT_BRAND := Xiaomi
