@@ -151,7 +151,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.bt.a2dp.aac_disable=true
 
-# System property for cabl
+# SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.protected_contents=true
+
+# Qualcomm CABL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0
 
