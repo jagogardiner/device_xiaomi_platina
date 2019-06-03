@@ -7,9 +7,9 @@
   },
   {
     "remote": "github",
-    "repository": "nysadev/vendor_xiaomi_platina",
+    "repository": "nysadev/vendor_xiaomi_platina_new",
     "target_path": "vendor/xiaomi/platina",
-    "branch": "pie"
+    "branch": "master"
   },
   {
     "remote": "github",
