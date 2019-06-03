@@ -1,0 +1,3 @@
+add_lunch_combo rr_platina-userdebug
+add_lunch_combo rr_platina-user
+add_lunch_combo rr_platina-eng
