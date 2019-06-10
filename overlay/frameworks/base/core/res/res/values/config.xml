@@ -553,4 +553,7 @@
           so that applications can still use their own mechanisms. -->
      <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- Make things go fast -->
+    <bool name="config_ui_enableFadingMarquee">false</bool>
+
 </resources>
