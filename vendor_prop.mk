@@ -267,12 +267,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.pickup=true
 
+# HAL1 apps list
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.hal1.packagelist=org.codeaurora.snapcam
+
 # Enable HAL3
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
-    persist.vendor.camera.eis.enable=1 \
-    persist.camera.HAL3.enabled=1 \
-    persist.camera.eis.enable=1
+    persist.vendor.camera.eis.enable=1
 
 # Expose aux camera for below packages
 PRODUCT_PROPERTY_OVERRIDES += \
