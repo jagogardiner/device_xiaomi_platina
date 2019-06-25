@@ -324,16 +324,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.panel_info.sh
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.jason-libperfmgr
-
-PRODUCT_COPY_FILES += \
-    device/xiaomi/platina/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-service.sdm660-libperfmgr
+
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QCOM
 PRODUCT_COPY_FILES += \

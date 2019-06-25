@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.2-service.jason-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.2-service.sdm660-libperfmgr"
 
 #include <android/log.h>
 #include <hidl/HidlTransportSupport.h>
