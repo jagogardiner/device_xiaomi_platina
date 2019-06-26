@@ -1,61 +1,4 @@
-on early-init
-    # mount schedtune and blkio together in "on early-init",
-    # so that mount schedtune in init.rc will fail
-    mkdir /dev/stune
-    mount cgroup none /dev/stune nodev noexec nosuid schedtune,blkio
-
-    mkdir /dev/stune/foreground
-    mkdir /dev/stune/background
-    mkdir /dev/stune/top-app
-    mkdir /dev/stune/rt
-
 on init
-    # Setup schedtune
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 0
-    write /dev/stune/top-app/schedtune.prefer_idle 1
-
-    # Setup all cpusets
-    mkdir /dev/cpuset/kernel 0750 root system
-    write /dev/cpuset/kernel/cpus 0
-    write /dev/cpuset/kernel/mems 0
-    chown system system /dev/cpuset/kernel/tasks
-    chmod 0660 /dev/cpuset/kernel/tasks
-    mkdir /dev/cpuset/system 0750 root system
-    write /dev/cpuset/system/cpus 0
-    write /dev/cpuset/system/mems 0
-    chown system system /dev/cpuset/system/tasks
-    chmod 0660 /dev/cpuset/system/tasks
-    mkdir /dev/cpuset/system/performance 0750 root system
-    write /dev/cpuset/system/performance/cpus 0
-    write /dev/cpuset/system/performance/mems 0
-    chown system system /dev/cpuset/system/performance/tasks
-    chmod 0660 /dev/cpuset/system/performance/tasks
-    mkdir /dev/cpuset/system/background 0750 root system
-    write /dev/cpuset/system/background/cpus 0
-    write /dev/cpuset/system/background/mems 0
-    chown system system /dev/cpuset/system/background/tasks
-    chmod 0660 /dev/cpuset/system/background/tasks
-    mkdir /dev/cpuset/application 0750 root system
-    write /dev/cpuset/application/cpus 0
-    write /dev/cpuset/application/mems 0
-    chown system system /dev/cpuset/application/tasks
-    chmod 0660 /dev/cpuset/application/tasks
-    mkdir /dev/cpuset/application/performance 0750 root system
-    write /dev/cpuset/application/performance/cpus 0
-    write /dev/cpuset/application/performance/mems 0
-    chown system system /dev/cpuset/application/performance/tasks
-    chmod 0660 /dev/cpuset/application/performance/tasks
-    mkdir /dev/cpuset/application/background 0750 root system
-    write /dev/cpuset/application/background/cpus 0
-    write /dev/cpuset/application/background/mems 0
-    chown system system /dev/cpuset/application/background/tasks
-    chmod 0660 /dev/cpuset/application/background/tasks
-    mkdir /dev/cpuset/camera-daemon 0750 cameraserver cameraserver
-    write /dev/cpuset/camera-daemon/cpus 0
-    write /dev/cpuset/camera-daemon/mems 0
-    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
-    chmod 0660 /dev/cpuset/camera-daemon/tasks
 
     # boot time fs tune
     write /sys/block/mmcblk0/queue/scheduler cfq
@@ -66,27 +9,6 @@ on init
     write /sys/block/mmcblk0rpmb/queue/iostats 0
     write /sys/block/mmcblk0rpmb/queue/read_ahead_kb 2048
     write /sys/block/mmcblk0rpmb/queue/nr_requests 256
-
-    # Write initial values
-    write /dev/stune/blkio.group_idle 0
-    write /dev/stune/foreground/blkio.group_idle 0
-    write /dev/stune/background/blkio.group_idle 0
-    write /dev/stune/top-app/blkio.group_idle 0
-    write /dev/stune/rt/blkio.group_idle 0
-
-    # configure LPM
-    write /sys/module/lpm_levels/system/pwr/cpu0/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/pwr/cpu1/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/pwr/cpu2/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/pwr/cpu3/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/cpu4/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/cpu5/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/cpu6/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/cpu7/ret/idle_enabled N
-    write /sys/module/lpm_levels/system/pwr/pwr-l2-dynret/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/perf-l2-dynret/idle_enabled N
-    write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled N
 
     # Setup swap
     write /proc/sys/vm/page-cluster 0
@@ -99,9 +21,6 @@ on init
     write /sys/class/timed_output/vibrator/vtg_level 2697
 
 on post-fs
-    # Disable sched autogroup
-    write /proc/sys/kernel/sched_autogroup_enabled 0
-
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
@@ -110,21 +29,6 @@ on post-fs
     write /sys/devices/virtual/graphics/fb0/idle_time 100
 
 on boot
-    #Set on boot cpusets
-    write /dev/cpuset/top-app/cpus 0-3,4-7
-    write /dev/cpuset/foreground/cpus 0-3,4-7
-    write /dev/cpuset/background/cpus 0-7
-    write /dev/cpuset/system-background/cpus 0-7
-    write /dev/cpuset/kernel/cpus 0-7
-    write /dev/cpuset/system/cpus 0-7
-    write /dev/cpuset/system/performance/cpus 0-7
-    write /dev/cpuset/system/background/cpus 0-7
-    write /dev/cpuset/system/cpus 0-7
-    write /dev/cpuset/application/cpus 0-7
-    write /dev/cpuset/application/performance/cpus 0-7
-    write /dev/cpuset/application/background/cpus 0-7
-    write /dev/cpuset/application/cpus 0-7
-
 on property:sys.boot_completed=1
     # Set the default IRQ affinity to the silver cluster.
     write /proc/irq/default_smp_affinity f
@@ -132,25 +36,6 @@ on property:sys.boot_completed=1
     # according to Qcom this legacy value improves first launch latencies
     # stock value is 512k
     setprop dalvik.vm.heapminfree 2m
-
-    # Setup post-boot cpusets
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-3,6-7
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/camera-daemon/cpus 0-7
-    write /dev/cpuset/restricted/cpus 0-3
-    write /dev/cpuset/kernel/cpus 2,3
-    write /dev/cpuset/system/performance/cpus 6-7
-    write /dev/cpuset/system/background/cpus 0-1
-    write /dev/cpuset/system/cpus 0-1,6-7
-    write /dev/cpuset/application/performance/cpus 4-5
-    write /dev/cpuset/application/background/cpus 0-1
-    write /dev/cpuset/application/cpus 0-1,4-5
-
-    # Setup CPU governor
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
 
     # Enable bus-dcvs
     write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
@@ -218,8 +103,6 @@ on property:sys.boot_completed=1
 
     # Lower vfs_cache_pressure
     write /proc/sys/vm/vfs_cache_pressure 100
-
-    setprop net.hostname xiaomi-platina
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
