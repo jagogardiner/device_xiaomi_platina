@@ -267,10 +267,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.pickup=true
 
-# HAL1 apps list
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android
-
 # Enable HAL3
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
@@ -280,7 +276,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Expose aux camera for below packages
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,org.lineageos.snap
 
 # Disable UBWC for camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -373,13 +369,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m \
-    ro.hardware.nfc_nci=nqx.default \
     persist.radio.multisim.config=dsds \
     persist.vendor.qcomsysd.enabled=1 \
     keyguard.no_require_sim=true \
     ro.com.android.dataroaming=true \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
