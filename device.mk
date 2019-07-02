@@ -366,6 +366,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.performance.platina.rc \
     ueventd.qcom.rc \
+    init.mi_thermald.rc \
     fstab.qcom
 
 # RCS
