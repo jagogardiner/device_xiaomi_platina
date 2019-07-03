@@ -365,6 +365,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     persist.radio.apm_sim_not_pwdn=1
 
+#Netflix custom property
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q845-05000-1
+
 # Vendor prop from miui
 #
 # ADDITIONAL VENDOR BUILD PROPERTIES
