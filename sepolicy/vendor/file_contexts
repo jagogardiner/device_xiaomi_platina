@@ -17,9 +17,6 @@
 /vendor/usr/idc(/.*)?                               u:object_r:idc_file:s0
 /vendor/usr/keylayout(/.*)?                         u:object_r:keylayout_file:s0
 
-# Mlipay
-/(vendor|system/vendor)/bin/mlipayd                 u:object_r:hal_mlipay_default_exec:s0
-
 # Readmac
 /(vendor|system/vendor)/bin/readmac                 u:object_r:readmac_exec:s0
 

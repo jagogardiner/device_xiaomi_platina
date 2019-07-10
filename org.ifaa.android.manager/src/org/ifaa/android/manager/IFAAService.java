@@ -17,11 +17,6 @@ public class IFAAService extends Service {
     private static final String TAG = "IFAAService";
 
     private final IBinder mIFAABinder = new IIFAAService.Stub() {
-        private static final String INTERFACE_DESCRIPTOR =
-                "vendor.xiaomi.hardware.mlipay@1.0::IMlipayService";
-        private static final String SERVICE_NAME =
-                "vendor.xiaomi.hardware.mlipay@1.0::IMlipayService";
-
         private static final int CODE_PROCESS_CMD = 1;
 
         private IHwBinder mService;
