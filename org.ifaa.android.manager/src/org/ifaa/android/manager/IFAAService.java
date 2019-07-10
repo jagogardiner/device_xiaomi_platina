@@ -26,11 +26,9 @@ public class IFAAService extends Service {
             HwParcel reply = new HwParcel();
             try {
                 if (mService == null) {
-                    mService = HwBinder.getService(SERVICE_NAME, "default");
                 }
                 if (mService != null) {
                     HwParcel data = new HwParcel();
-                    data.writeInterfaceToken(INTERFACE_DESCRIPTOR);
                     ArrayList arrayList = new ArrayList(Arrays.asList(HwBlob.wrapArray(param)));
                     data.writeInt8Vector(arrayList);
                     data.writeInt32(arrayList.size());
