@@ -41,6 +41,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
+# ARStickersMod for GoogleCamera and GoogleMaps
+PRODUCT_PACKAGES += \
+    ARStickersMod
+
+# Playground for GoogleCamera
+PRODUCT_PACKAGES += \
+    PlaygroundMod
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
