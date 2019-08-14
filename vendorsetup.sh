@@ -1,3 +1,3 @@
-add_lunch_combo lineage_platina-userdebug
-add_lunch_combo lineage_platina-eng
-add_lunch_combo lineage_platina-user
+add_lunch_combo potato_platina-userdebug
+add_lunch_combo potato_platina-eng
+add_lunch_combo potato_platina-user
