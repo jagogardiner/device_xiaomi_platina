@@ -602,9 +602,6 @@
           so that applications can still use their own mechanisms. -->
      <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- Make things go fast -->
-    <bool name="config_ui_enableFadingMarquee">false</bool>
-
     <!-- Specify custom blanking delay of the display -->
     <integer name="config_screen_off_delay">0</integer>
 
