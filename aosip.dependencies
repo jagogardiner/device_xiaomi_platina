@@ -11,5 +11,15 @@
   {
     "repository": "kernel_xiaomi_platina",
     "target_path": "kernel/xiaomi/platina"
+  },
+  {
+    "repository":  "kdrag0n/aarch64-elf-gcc",
+    "target_path": "prebuilts/gcc/linux-x86/aarch64/gcc-9",
+    "branch":      "9.x"
+  },
+  {
+    "repository":  "kdrag0n/arm-eabi-gcc",
+    "target_path": "prebuilts/gcc/linux-x86/arm/gcc-9",
+    "branch":      "9.x"
   }
 ]
