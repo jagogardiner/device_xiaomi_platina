@@ -403,6 +403,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.sensors.sh
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/motorola/nash
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext
