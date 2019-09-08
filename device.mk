@@ -477,7 +477,6 @@ PRODUCT_PACKAGES += \
     wificond \
     wifilogd \
     wpa_supplicant \
-<<<<<<< HEAD
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
