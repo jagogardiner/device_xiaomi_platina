@@ -34,7 +34,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IDevicesFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@4.0::IDevicesFactory/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
@@ -44,7 +44,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IEffectsFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@4.0::IEffectsFactory/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.biometrics.fingerprint</name>
@@ -54,7 +54,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::IBiometricsFingerprint/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -64,7 +64,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IBluetoothHci</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IBluetoothHci/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>
@@ -74,7 +74,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ICameraProvider</name>
             <instance>legacy/0</instance>
         </interface>
-        <fqname>@2.4::ICameraProvider/legacy/0</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.configstore</name>
@@ -84,7 +84,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ISurfaceFlingerConfigs</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.drm</name>
@@ -100,12 +100,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
             <instance>clearkey</instance>
         </interface>
-        <fqname>@1.0::ICryptoFactory/default</fqname>
-        <fqname>@1.0::IDrmFactory/default</fqname>
-        <fqname>@1.1::ICryptoFactory/clearkey</fqname>
-        <fqname>@1.1::ICryptoFactory/widevine</fqname>
-        <fqname>@1.1::IDrmFactory/clearkey</fqname>
-        <fqname>@1.1::IDrmFactory/widevine</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -115,7 +110,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IGatekeeper</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IGatekeeper/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.gnss</name>
@@ -135,7 +130,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IAllocator</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IAllocator/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
@@ -145,7 +140,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IComposer</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::IComposer/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
@@ -155,7 +150,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IMapper</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IMapper/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.health</name>
@@ -165,7 +160,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IHealth</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IHealth/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
@@ -175,7 +170,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IKeymasterDevice</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IKeymasterDevice/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.light</name>
@@ -185,7 +180,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ILight</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ILight/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -199,8 +194,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IOmxStore</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IOmx/default</fqname>
-        <fqname>@1.0::IOmxStore/default</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.memtrack</name>
@@ -210,7 +205,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IMemtrack</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IMemtrack/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.power</name>
@@ -220,7 +215,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IPower</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IPower/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
@@ -236,10 +231,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@1.2::IRadio/slot1</fqname>
-        <fqname>@1.2::IRadio/slot2</fqname>
-        <fqname>@1.2::ISap/slot1</fqname>
-        <fqname>@1.2::ISap/slot2</fqname>
+
+
+
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -249,7 +244,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IRadioConfig</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IRadioConfig/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.renderscript</name>
@@ -259,7 +254,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IDevice</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IDevice/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
@@ -269,7 +264,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ISensors</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ISensors/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
@@ -279,7 +274,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ISoundTriggerHw</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::ISoundTriggerHw/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
@@ -289,7 +284,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IOffloadConfig</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IOffloadConfig/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.control</name>
@@ -299,7 +294,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IOffloadControl</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IOffloadControl/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.thermal</name>
@@ -309,7 +304,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IThermal</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IThermal/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.usb</name>
@@ -319,7 +314,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IUsb</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IUsb/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.vibrator</name>
@@ -329,7 +324,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IVibrator</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IVibrator/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.wifi</name>
@@ -339,7 +334,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IWifi</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.2::IWifi/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.wifi.hostapd</name>
@@ -349,7 +344,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IHostapd</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IHostapd/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>android.hardware.wifi.supplicant</name>
@@ -359,7 +354,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ISupplicant</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::ISupplicant/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>com.fingerprints.extension</name>
@@ -393,13 +388,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IFingerprintSensorTest</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IFingerprintAuthenticator/default</fqname>
-        <fqname>@1.0::IFingerprintCalibration/default</fqname>
-        <fqname>@1.0::IFingerprintEngineering/default</fqname>
-        <fqname>@1.0::IFingerprintNavigation/default</fqname>
-        <fqname>@1.0::IFingerprintRecalibration/default</fqname>
-        <fqname>@1.0::IFingerprintSenseTouch/default</fqname>
-        <fqname>@1.0::IFingerprintSensorTest/default</fqname>
+
+
+
+
+
+
+
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.ant</name>
@@ -418,7 +413,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IBluetoothAudio</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IBluetoothAudio/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
@@ -428,7 +423,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IdpmQmi</name>
             <instance>dpmQmiService</instance>
         </interface>
-        <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
+
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.imscmservice</name>
@@ -438,7 +433,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IImsCmService</name>
             <instance>qti.ims.connectionmanagerservice</instance>
         </interface>
-        <fqname>@2.1::IImsCmService/qti.ims.connectionmanagerservice</fqname>
+
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
@@ -448,7 +443,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IUceService</name>
             <instance>com.qualcomm.qti.uceservice</instance>
         </interface>
-        <fqname>@2.0::IUceService/com.qualcomm.qti.uceservice</fqname>
+
     </hal>
     <hal format="hidl">
         <name>com.quicinc.cne.api</name>
@@ -489,7 +484,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IDisplayColor</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IDisplayColor/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.display.config</name>
@@ -499,7 +494,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IDisplayConfig</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IDisplayConfig/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.display.postproc</name>
@@ -509,7 +504,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IDisplayPostproc</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IDisplayPostproc/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.goodix.hardware.fingerprintextension</name>
@@ -519,7 +514,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IGoodixBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IGoodixBiometricsFingerprint/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
@@ -529,7 +524,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IFactory/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
@@ -539,7 +534,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IEsePowerManager</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IEsePowerManager/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
@@ -549,7 +544,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
         </interface>
-        <fqname>@1.2::ILocHidlGnss/gnss_vendor</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
@@ -559,7 +554,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
         </interface>
-        <fqname>@2.0::ILocHidlGnss/gnss_vendor</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
@@ -569,7 +564,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IAlarm</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IAlarm/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.latency</name>
@@ -597,7 +592,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IPerf</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IPerf/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.qdutils_disp</name>
@@ -607,7 +602,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IQdutilsDisp</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IQdutilsDisp/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.qteeconnector</name>
@@ -621,8 +616,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IGPAppConnector</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IAppConnector/default</fqname>
-        <fqname>@1.0::IGPAppConnector/default</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.am</name>
@@ -633,8 +628,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@1.0::IQcRilAudio/slot1</fqname>
-        <fqname>@1.0::IQcRilAudio/slot2</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.config</name>
@@ -655,8 +650,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>imsradio0</instance>
             <instance>imsradio1</instance>
         </interface>
-        <fqname>@1.4::IImsRadio/imsradio0</fqname>
-        <fqname>@1.4::IImsRadio/imsradio1</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
@@ -667,8 +662,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>UimLpa0</instance>
             <instance>UimLpa1</instance>
         </interface>
-        <fqname>@1.0::IUimLpa/UimLpa0</fqname>
-        <fqname>@1.0::IUimLpa/UimLpa1</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -679,8 +674,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>oemhook0</instance>
             <instance>oemhook1</instance>
         </interface>
-        <fqname>@1.0::IQtiOemHook/oemhook0</fqname>
-        <fqname>@1.0::IQtiOemHook/oemhook1</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -691,8 +686,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@1.0::IQtiRadio/slot1</fqname>
-        <fqname>@1.0::IQtiRadio/slot2</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -703,8 +698,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@2.0::IQtiRadio/slot1</fqname>
-        <fqname>@2.0::IQtiRadio/slot2</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
@@ -715,8 +710,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>Uim0</instance>
             <instance>Uim1</instance>
         </interface>
-        <fqname>@1.1::IUim/Uim0</fqname>
-        <fqname>@1.1::IUim/Uim1</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
@@ -727,8 +722,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>uimRemoteClient0</instance>
             <instance>uimRemoteClient1</instance>
         </interface>
-        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient0</fqname>
-        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient1</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
@@ -739,8 +734,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>uimRemoteServer0</instance>
             <instance>uimRemoteServer1</instance>
         </interface>
-        <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer0</fqname>
-        <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
+
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>
@@ -750,7 +745,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ISoter</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ISoter/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
@@ -760,7 +755,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ITuiComm</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ITuiComm/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.hostapd</name>
@@ -770,7 +765,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IHostapdVendor</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IHostapdVendor/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.supplicant</name>
@@ -780,7 +775,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ISupplicantVendor</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ISupplicantVendor/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.ims.callinfo</name>
@@ -790,7 +785,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IService</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IService/default</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
@@ -800,7 +795,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
         </interface>
-        <fqname>@1.0::IRTPService/imsrtpservice</fqname>
+
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.trust</name>
