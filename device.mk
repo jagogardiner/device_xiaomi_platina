@@ -447,8 +447,6 @@ PRODUCT_PACKAGES += \
     libicuuc.vendor \
     libstdc++.vendor \
     libgui_vendor \
-    libcutils \
-    libgptutils \
     vndk_package
 
 PRODUCT_COPY_FILES += \
