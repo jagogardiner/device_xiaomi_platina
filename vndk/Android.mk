@@ -15,6 +15,8 @@ VNDK_SP_LIBRARIES := \
 install_in_hw_dir := \
    android.hidl.memory@1.0-impl
 
+vndk_sp_dir := vndk-sp-$(PLATFORM_VNDK_VERSION)
+
 define define-vndk-sp-lib
 include $$(CLEAR_VARS)
 LOCAL_MODULE := $1.vndk-sp-gen
@@ -49,6 +51,9 @@ endef
 $(foreach lib,$(VNDK_SAMEPROCESS_LIBRARIES),\
     $(if $(filter $(lib),$(VNDK_SP_LIBRARIES)),,\
     $(eval VNDK_SP_LIBRARIES += $(lib))))
+
+# Remove libz from the VNDK-SP list (b/73296261)
+VNDK_SP_LIBRARIES := $(filter-out libz,$(VNDK_SP_LIBRARIES))
 
 $(foreach lib,$(VNDK_SP_LIBRARIES),\
     $(eval $(call define-vndk-sp-lib,$(lib))))
